@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 23)
 
 find_package(Catch2 3 REQUIRED)
 
-add_executable(Tutorial mujin-test-1.cpp
+add_executable(Tutorial mujin-test.cpp
         divar-test.cpp)
 target_link_libraries(Tutorial Catch2::Catch2WithMain)
 
