@@ -29,5 +29,5 @@ string rebuild_message(vector<string> parts) {
 }
 
 TEST_CASE( "Rebuild message test") {
-REQUIRE( rebuild_message({"A hello","o radius", "mul tang", "samsung m", "go aZ"}) == "A hello radiusamsung mul tango aZ" );
+    REQUIRE( rebuild_message({"A hello","o radius", "mul tang", "samsung m", "go aZ"}) == "A hello radiusamsung mul tango aZ" );
 }
