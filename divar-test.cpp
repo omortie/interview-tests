@@ -1,3 +1,7 @@
+// clear explainnation and simple input and output template
+// can help the readers understand the problem properly
+// I assume this problem seeks for, corresponding elements should be counted!
+
 #include <vector>
 
 #include <catch2/catch_test_macros.hpp>
