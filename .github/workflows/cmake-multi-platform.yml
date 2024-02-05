@@ -61,6 +61,9 @@ jobs:
     - name: Conan version
       run: echo "${{ steps.conan.outputs.version }}"
 
+    - name: Profile detect for conan
+      run: conan profile detect
+
     - name: install Catch2 with Conan
       run: conan install .
 
