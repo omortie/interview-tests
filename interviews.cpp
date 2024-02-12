@@ -23,9 +23,35 @@ vector<int> sortTwoVectors(vector<int> &a, vector<int> &b) {
     return mix;
 }
 
-TEST_CASE("sort two vectors task") {
+int findMax(vector<int> &a) {
+    int max = 0;
+    for (const auto& it : a) {
+        if (it > max) {
+            max = it;
+        }
+    }
+    return max;
+}
+
+int findSecondMax(vector<int> &a) {
+    int max = findMax(a);
+
+    do {
+        auto max_it = find_if(a.begin(), a.end(), [&](const auto& it) {
+            return it == max;
+        });
+        a.erase(max_it);
+    } while (find(a.begin(), a.end(), max) != a.end());
+
+    return findMax(a);
+}
+
+TEST_CASE("PEP interview tests")
+{
     vector<int> a{7, 4, 9};
     vector<int> b{9, 3, 6};
     vector<int> c{3, 4, 6, 7, 9, 9};
+
     REQUIRE(sortTwoVectors(a, b) == c);
+    REQUIRE(findSecondMax(c) == 7);
 }
