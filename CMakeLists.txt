@@ -9,7 +9,8 @@ add_executable(Tutorial
         mujin-test.cpp
         divar-test.cpp
         digikala-test.cpp
-        interviews.cpp)
+        interviews.cpp
+        tutorial-tests.cpp)
 target_link_libraries(Tutorial Catch2::Catch2WithMain)
 
 include(CTest)
