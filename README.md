@@ -1,4 +1,4 @@
-Solved C++/Qt interview and competition tests 
+Solved C++/Qt interview tests
 
 ## Build
 You have to install [Conan](https://conan.io/downloads) 2.x and then run this command in root of the project:
